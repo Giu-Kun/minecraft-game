@@ -1,6 +1,19 @@
-// script.js
+// quiz.js
 
-import { quizData } from './quiz.js';
+const quizData = [
+    {
+        question: 'Wie viele Blöcke gibt es in einem Minecraft-Stack?',
+        options: ['32', '64', '128'],
+        correctAnswer: '64'
+    },
+    {
+        question: 'Aus welchem Material muss man einen Werkzeugtisch herstellen?',
+        options: ['Holzbretter', 'Eisenbarren', 'Stein', 'Obsidian'],
+        correctAnswer: 'Holzbretter'
+    },
+    // Add more questions here
+];
+
 
 let currentQuestion = 0;
 let correctAnswers = 0;
@@ -17,6 +30,8 @@ function startQuiz() {
 
     showQuestion();
 }
+
+// ... (rest of your code)
 
 
 function showQuestion() {
