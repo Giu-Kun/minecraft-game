@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'MinecraftBold';
+    src: url('./minecraft-font/MinecraftBold-nMK1.otf') format('opentype');
+    /* Adjust the path based on the location of your font file */
+}
+
+@font-face {
+    font-family: 'MinecraftBoldItalic';
+    src: url('./minecraft-font/MinecraftBoldItalic-1y1e.otf') format('opentype');
+    /* Adjust the path based on the location of your font file */
+}
+
+@font-face {
+    font-family: 'MinecraftItalic';
+    src: url('./minecraft-font/MinecraftItalic-R8Mo.otf') format('opentype');
+    /* Adjust the path based on the location of your font file */
+}
+
+@font-face {
+    font-family: 'MinecraftRegular';
+    src: url('./minecraft-font/MinecraftRegular-Bmg3.otf') format('opentype');
+    /* Adjust the path based on the location of your font file */
+}
+
+body {
+    font-family: 'MinecraftRegular', 'Arial', sans-serif;
+    /* Use MinecraftRegular font or fallback to Arial and sans-serif */
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-JvNaVmeT2Pw%2FVhJA4AghghI%2FAAAAAAAAARI%2F_I9FX-_Zl54%2Fs1600%2FBlock%2Bof%2BGrass%2B1.png&f=1&nofb=1&ipt=c244b7361a6543365e8051d5252e9c1355259c454029d94008a66b1d49d83a7e&ipo=images');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    text-align: center;
+}
+
+#quiz-content {
+    margin-bottom: 20px;
+}
+
+#quiz-content input,
+#quiz-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quiz-content input {
+    margin-bottom: 10px;
+}
+
+#quiz button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result-screen {
+    display: none;
+    text-align: center;
+}
+
+#result-screen img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
