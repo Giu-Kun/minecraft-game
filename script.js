@@ -10,13 +10,14 @@ function startQuiz() {
     userName = document.getElementById('nameInput').value;
 
     if (userName.trim() === '') {
-        alert('Please enter your name to start the quiz.');
+        alert('Bitte gib deinen Namen ein, um das Quiz zu starten.');
         return;
     }
     document.getElementById('quiz-content').style.display = 'none';
 
     showQuestion();
 }
+
 
 function showQuestion() {
     const quizContainer = document.getElementById('quiz');
