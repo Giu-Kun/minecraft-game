@@ -90,21 +90,13 @@ const quizData = [
         options: ['Er teleportiert sich', 'Er wird aggressiv', 'Er verschwindet', 'Er wird friedlich'],
         correctAnswer: 'Er wird aggressiv'
     },
-    {
-        question: 'Welcher Block wird verwendet, um Portale ins Nether zu erstellen?',
-        options: ['Enderperle', 'Obsidian', 'Blaze Powder', 'Ghastträne'],
-        correctAnswer: 'Obsidian'
-    },
+
     {
         question: 'Wie nennt man die fliegenden Kreaturen, die im Nether vorkommen?',
         options: ['Drachen', 'Ghast', 'Enderdrachen', 'Wächter'],
         correctAnswer: 'Ghast'
     },
-    {
-        question: 'Welches Werkzeug wird benötigt, um Redstone abzubauen?',
-        options: ['Spitzhacke', 'Schwert', 'Axt', 'Schaufel'],
-        correctAnswer: 'Spitzhacke'
-    },
+
     {
         question: 'Wofür benötigt man 3 Fäden und 3 Stöcke ?',
         options: ['Angel', 'Schaufel', 'Bogen', 'Den magischen Mega Käsestab'],
@@ -115,16 +107,7 @@ const quizData = [
         options: ['Wächter', 'Magma Cube', 'Blaze', 'Wither'],
         correctAnswer: 'Blaze'
     },
-    {
-        question: 'Welches Material wird für die Herstellung von Papier benötigt?',
-        options: ['Zuckerrohr', 'Bambus', 'Weizen', 'Karotten'],
-        correctAnswer: 'Zuckerrohr'
-    },
-    {
-        question: 'Welche Pflanze wird benötigt, um Tränke der Heilung herzustellen?',
-        options: ['Goldener Apfel', 'Glowstone Dust', 'Magmawürfel', 'Netherwarzen'],
-        correctAnswer: 'Goldener Apfel'
-    },
+
     {
         question: 'Wie nennt man die speziellen Villager, die in den Dörfern Fleischhandel treiben?',
         options: ['Butcher', 'Illager', 'Priester', 'Schmied'],
@@ -138,29 +121,24 @@ const quizData = [
     },
     {
         question: 'Welche Kreaturen kann man mit Knochen zähmen?',
-        options: ['Wölfe', 'Bären', 'Eisengolems', 'Ozelots'],
+        options: ['Skellette', 'Wölfe', 'Eisengolems', 'Ozelots'],
         correctAnswer: 'Wölfe'
     },
-    {
-        question: 'Welches Material wird für die Herstellung von Feuerwerksraketen benötigt?',
-        options: ['Schwarzpulver', 'Stöcke', 'Diamanten', 'Glowstone Dust'],
-        correctAnswer: 'Schwarzpulver'
-    },
+
+
     {
         question: 'Was ist die Hauptnahrungsquelle für Villager?',
         options: ['Karotten', 'Brot', 'Zombiefleisch', 'Fleisch'],
         correctAnswer: 'Brot'
     },
+
     {
-        question: 'Wie nennt man die fliegenden Kreaturen die Erscheint wenn man nicht Schläft?',
+        question: 'Wie nennt man die fliegenden Kreaturen die erscheinen wenn man nicht Schläft?',
         options: ['Phantom', 'Herobrine', 'Wächter', 'Schwebender Augapfel'],
         correctAnswer: 'Phantom'
     },
-    {
-        question: 'Welche Kreatur wird beschworen, wenn man drei Wither-Skelette besiegt und ihre Köpfe auf Soulsand platziert?',
-        options: ['Illager-König', 'Golem', 'Wither', 'Enderdrache'],
-        correctAnswer: 'Wither'
-    },
+
+
     {
         question: 'Welcher Block wird benötigt, um einen Ofen zu craften?',
         options: ['Holzbretter', 'Eisenbarren', 'Cobblestone', 'Redstone'],
@@ -176,38 +154,16 @@ const quizData = [
         options: ['Desert', 'Taubenschwanzwald', 'Ocean', 'Taiga'],
         correctAnswer: 'Taiga'
     },
-    {
-        question: 'Welches Material wird für die Herstellung von Leine benötigt?',
-        options: ['Faden', 'Seide', 'Wolle', 'Leder'],
-        correctAnswer: 'Faden'
-    },
+
 
     {
-        question: 'Wie nennt man die einzigen bösartigen Kreaturen in Minecraft die Knochen droppen?',
-        options: ['Creeper', 'Zombie', 'Enderman', 'Skeleton'],
-        correctAnswer: 'Skeleton'
-    },
-    {
-        question: 'Welches Material wird für die Herstellung von Leuchtfeuern benötigt?',
-        options: ['Obsidian', 'Glas', 'Netherstern', 'Blaze Powder'],
-        correctAnswer: 'Netherstern'
-    },
-    {
-        question: 'Welches Werkzeug wird verwendet, um Spinnenfäden abzubauen?',
-        options: ['Spitzhacke', 'Schwert', 'Axt', 'Schaufel'],
-        correctAnswer: 'Schwert'
-    },
-
-    {
-        question: 'Welches Biom ist bekannt für seine riesigen Pilze und Pilzkuh-Kreaturen?',
+        question: 'Welches Biom ist bekannt für seine riesigen Pilze und Pilzkuh?',
         options: ['Taubenschwanzwald', 'Mushroomisland', 'Mushroomcave', 'Magic Forest'],
         correctAnswer: 'Mushroomisland'
     },
     // Add more questions here
 ];
 
-
-// Add more questions here if needed
 
 
 let currentQuestion = 0;
@@ -258,7 +214,7 @@ function showCorrectScreen() {
     currentQuestion++;
 
     if (currentQuestion < quizData.length) {
-        setTimeout(showQuestion, 2000);
+        setTimeout(showQuestion, 1000);
     } else {
         setTimeout(showFinalScreen, 2000);
     }
@@ -279,7 +235,7 @@ function showFinalScreen() {
     quizContainer.innerHTML = `
         <h2>Herzlichen Glückwunsch ${userName}!</h2>
         <p>Du hast das Minecraft Geburtstags-Quiz mit ${correctAnswers} richtigen Antworten abgeschlossen.</p>
-        <p>Dein Preis: [Preis]</p>
+        <p>Dein Preis: Ein Minecraft Account</p>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Famyknichols.files.wordpress.com%2F2014%2F06%2Fcreeper.png&f=1&nofb=1&ipt=5007172df1d3fe10b1bcf83b14578454e896128478f698d0e878dbc9d952f13d&ipo=images" alt="Creeper Image" id="creeper-image">
         <button onclick="restartQuiz()">Quiz neu starten</button>
     `;
