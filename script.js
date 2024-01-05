@@ -1,3 +1,5 @@
+// quiz.js
+
 const quizData = [
     {
         question: 'Wie viele Blöcke gibt es in einem Minecraft-Stack?',
@@ -14,16 +16,7 @@ const quizData = [
         options: ['Enderperle', 'Obsidian', 'Redstone', 'Diamantblock'],
         correctAnswer: 'Obsidian'
     },
-    {
-        question: 'Wie nennt man die explodierenden Kreaturen in Minecraft?',
-        options: ['Creepers', 'Zombies', 'Skeletons', 'Enderman'],
-        correctAnswer: 'Creepers'
-    },
-    {
-        question: 'Welches Werkzeug wird verwendet, um Erze abzubauen?',
-        options: ['Spitzhacke', 'Schwert', 'Axt', 'Schaufel'],
-        correctAnswer: 'Spitzhacke'
-    },
+
     {
         question: 'Wie nennt man den Endboss in Minecraft?',
         options: ['Enderman', 'Enderdrache', 'Herobrine', 'Illager-König'],
@@ -34,16 +27,7 @@ const quizData = [
         options: ['Lapislazuli', 'Diamanten', 'Goldbarren', 'Redstone'],
         correctAnswer: 'Lapislazuli'
     },
-    {
-        question: 'Was benötigt man um Enchantingtable zu craften?',
-        options: ['Redstone', 'Gunpowder', 'Lapislazuli', 'Diamanten'],
-        correctAnswer: 'Diamanten'
-    },
-    {
-        question: 'Welches Material wird für die Herstellung von Tränken benötigt?',
-        options: ['Blaze Powder', 'Enderperle', 'Glowstone Dust', 'Netherwarzen'],
-        correctAnswer: 'Blaze Powder'
-    },
+
     {
         question: 'Wie heißt der standardmäßige Spielercharakter in Minecraft?',
         options: ['Steve', 'Alex', 'Herobrine', 'Notch'],
@@ -60,40 +44,35 @@ const quizData = [
         options: ['Herobrine', 'Vogelman', 'Null', 'Slenderman'],
         correctAnswer: 'Herobrine'
     },
-    {
-        question: 'Wie nennt man die mysteriösen, schwarz gekleideten Kreaturen mit lila Augen in Minecraft?',
-        options: ['Enderdrache', 'Wächter', 'Enderman', 'Schattengeister'],
-        correctAnswer: 'Enderman'
-    },
+
+
     {
         question: 'Was ist ein Wort welches der Enderman (sehr verzerrt) sagt?',
         options: ['Enderperle', 'Apfel', 'Baum', 'Hello'],
         correctAnswer: 'Hello'
     },
+
     {
         question: 'Welcher Entwickler hat Minecraft ursprünglich erschaffen?',
         options: ['Notch', 'Arazhul_HD', 'Gronkh', 'Microsoft'],
         correctAnswer: 'Notch'
     },
     {
-        question: 'Wie nennt man der Endboss vom Nether?',
+        question: 'Wie nennt man den Endboss vom Nether?',
         options: ['Wither', 'Enderdrache', 'Illager-König', 'Golem'],
         correctAnswer: 'Wither'
     },
     {
         question: 'Welcher Block wird benötigt, um einen Golem in Minecraft zu erschaffen?',
-        options: ['Eisenblöcke', 'Diamantblöcke', 'Goldblöcke', 'Obsidian'],
+        options: ['Diamantblöcke', 'Eisenblöcke', 'Goldblöcke', 'Obsidian'],
         correctAnswer: 'Eisenblöcke'
     },
-    {
-        question: 'Was trägt Steve normalerweise auf dem Kopf?',
-        options: ['Helm', 'Kürbis', 'Blumenkranz', 'Kopftuch'],
-        correctAnswer: 'Helm'
-    },
+
+
     {
         question: 'Wovor haben Enderman angst?',
         options: ['Katzen', 'Kartoffeln', 'Kürbis', 'Schnee'],
-        correctAnswer: 'Endstein'
+        correctAnswer: 'Kürbis'
     },
     {
         question: 'Welche der folgenden Kreaturen kommen nicht in der Oberwelt natürlich vor?',
@@ -227,6 +206,10 @@ const quizData = [
     // Add more questions here
 ];
 
+
+// Add more questions here if needed
+
+
 let currentQuestion = 0;
 let correctAnswers = 0;
 let userName;
@@ -235,15 +218,13 @@ function startQuiz() {
     userName = document.getElementById('nameInput').value;
 
     if (userName.trim() === '') {
-        alert('Bitte gib deinen Namen ein, um das Quiz zu starten.');
+        alert('Please enter your name to start the quiz.');
         return;
     }
     document.getElementById('quiz-content').style.display = 'none';
 
     showQuestion();
 }
-
-// ... (rest of your code)
 
 
 function showQuestion() {
